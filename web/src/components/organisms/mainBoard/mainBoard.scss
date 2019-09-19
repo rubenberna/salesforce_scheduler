@@ -1,0 +1,16 @@
+.main-board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 90vh;
+  width: 83%;
+
+  .ui.large.header {
+    margin-bottom: 16px;
+  }
+
+  button {
+    margin: 8px !important;
+  }
+}
