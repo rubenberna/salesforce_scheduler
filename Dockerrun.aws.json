@@ -1,0 +1,32 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "containerDefinitions": [
+    {
+      "name": "web",
+      "image": "docker.io/rubenberna/salesforce-scheduler-web",
+      "hostname": "web",
+      "essential": false,
+      "memory": 128
+    },
+    {
+      "name": "server",
+      "image": "docker.io/rubenberna/salesforce-scheduler-server",
+      "hostname": "api",
+      "essential": false,
+      "memory": 128
+    },
+    {
+      "name": "nginx",
+      "image": "docker.io/rubenberna/salesforce-scheduler-nginx",
+      "essential": true,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 80
+        }
+      ],
+      "links": ["web", "server"],
+      "memory": 128
+    }
+  ]
+}
