@@ -23,7 +23,7 @@ deploy:
   provider: elasticbeanstalk
   region: "eu-west-1"
   app: "salesforce-scheduler"
-  env: "SalesforceScheduler-env"
+  env: "SalesforceScheduler-env-1"
   bucket_name: "elasticbeanstalk-eu-west-1-305799247952"
   bucket_path: "salesforce-scheduler"
   on:
