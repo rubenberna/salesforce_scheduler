@@ -11,7 +11,7 @@ class ContractJob extends Job {
 
   saveData(record) {
     record.processedDate = Date.now()
-    db.addContractsData(record)
+    // db.addContractsData(record)
   }
 
   processRecord(record){

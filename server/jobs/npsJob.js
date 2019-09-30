@@ -14,7 +14,7 @@ class NpsJob extends Job {
 
   saveData(record) {
     record.processedDate = Date.now()
-    db.addNpsData(record)
+    // db.addNpsData(record)
   }
 
   // 1. Query the account name of the record
