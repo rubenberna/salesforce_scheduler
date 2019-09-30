@@ -13,7 +13,7 @@
       "image": "docker.io/rubenberna/salesforce-scheduler-server",
       "hostname": "api",
       "essential": false,
-      "memory": 128
+      "memory": 200
     },
     {
       "name": "nginx",
