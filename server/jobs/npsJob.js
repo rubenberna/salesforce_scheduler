@@ -4,9 +4,9 @@ const delighted = require('delighted')(process.env.DELIGHTED_API_KEY);
 const db = require('../config/firebase/db')
 
 // 1. Get all records who's next nps date is today
-const q = "SELECT Id, Name, Email, AccountId, Next_NPS_date__c, Type__c, Status__c, NPS_emails_sent__c FROM Contact WHERE (Next_NPS_date__c = TODAY AND Email != null) AND (Status__c = 'Geboekt' OR Status__c = 'On Hold' OR Status__c = 'Open') AND (Type__c != 'Sollicitant' AND Type__c != 'Strijkklant')"
+const q = "SELECT Id, Name, Email, AccountId, Next_NPS_date__c, Type__c, Status__c, NPS_emails_sent__c FROM Contact WHERE (Next_NPS_date__c = TODAY AND Email != null) AND Status__c = 'Geboekt' AND (Type__c != 'Sollicitant' AND Type__c != 'Strijkklant')"
 
-// const q = "SELECT Id, Name, Email, Next_NPS_date__c, AccountId, Status__c, NPS_emails_sent__c FROM Contact WHERE Email = 'rubenmbernardes@gmail.com'"
+// const q = "SELECT Id, Name, Email, Next_NPS_date__c, AccountId, Status__c, NPS_emails_sent__c FROM Contact WHERE Email = 'peggy.oyen@easylifedc.be'"
 
 class NpsJob extends Job {
 
